@@ -1,0 +1,17 @@
+{
+  "name": "go-electron-grpc",
+  "version": "1.0.0",
+  "description": "Just a proof of concept for Electron + gRPC + GoLang",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^1.4.15",
+    "electron-rebuild": "^1.5.7",
+    "grpc": "git+https://github.com/grpc/grpc.git#c84725fd02dc58a819c8c4e8acdc321e81f44764",
+    "jquery": "^3.1.1"
+  }
+}
