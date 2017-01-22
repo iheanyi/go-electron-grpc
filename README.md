@@ -12,11 +12,26 @@ This is just a proof of concept for Electron + Go + gRPC.
 1. `npm install` from the `client` folder and just run `electron main.js`.
 
 ###  Go
-1. Make sure you have gRPC installed. `go`
+1. Make sure you have gRPC installed. Follow the instructions
+   [here](https://github.com/grpc/grpc-go).
 
-## Installation
-1. WIP
+## Running the program
 
-### Contact
+### Generating the Server
+1. From the `demo` folder, run the following command. `protoc -I . demo.proto
+   --go_out=plugins=grpc:.`. This will generate the necessary PB package you
+   need.
+
+### Generating the Client
+1. I actually could not get the regular client generation working, so I just
+   gave up on this and just had it dynamically generated at runtime.
+
+
+### Tying them together
+1. First run the server by doing `go run server/main.go`.
+2. Then run the client doing `electron client/main.js`.
+3. You're done.
+
+## Contact
 Questions? Comments? Concerns? Hit me up on
 [Twitter](https://twitter.com/kwuchu)
