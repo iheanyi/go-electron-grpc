@@ -1,6 +1,6 @@
 # Electron + Go + gRPC
-
-This is just a proof of concept for Electron + Go + gRPC.
+This is just a proof of concept for Electron + Go + gRPC. You can also check out
+a video walkthrough of it on [YouTube](https://www.youtube.com/watch?v=jl2M1SfsoWk).
 
 ## Dependencies
 
