@@ -32,6 +32,11 @@ This is just a proof of concept for Electron + Go + gRPC.
 2. Then run the client doing `electron client/main.js`.
 3. You're done.
 
+## Common Issues
+If you are running into compile time errors, you might have to rebuild the
+dependencies. I suggest running `./client/rebuild.sh` and seeing if that fixes
+your issues.
+
 ## Contact
 Questions? Comments? Concerns? Hit me up on
 [Twitter](https://twitter.com/kwuchu)
