@@ -4,6 +4,7 @@ package demo;
 
 service Greeter {
   rpc SayHello(HelloRequest) returns (HelloReply) {}
+  rpc CreateTodo(CreateTodoRequest) returns (CreateTodoResponse) {}
 }
 
 message HelloRequest {
@@ -12,4 +13,18 @@ message HelloRequest {
 
 message HelloReply {
   string message = 1;
+}
+
+message CreateTodoRequest {
+  Todo todo = 1;
+}
+
+message CreateTodoResponse {
+  Todo todo = 1;
+}
+
+message Todo {
+  uint64 id = 1;
+  string description = 2;
+  bool done = 3;
 }
