@@ -24,6 +24,27 @@ func (s *server) SayHello(ctx context.Context, in *pb.HelloRequest) (*pb.HelloRe
 	return &pb.HelloReply{Message: "Hello " + in.Name}, nil
 }
 
+func (s *server) CreateTodo(ctx context.Context, in *pb.CreateTodoRequest) (*pb.CreateTodoResponse, error) {
+	todo, err := s.store.CreateTodo(in.Todo)
+	if err != nil {
+		return nil, err
+	}
+	return &pb.CreateTodoResponse{
+		Todo: todo,
+	}, nil
+}
+
+func (s *server) ListTodos(ctx context.Context, in *pb.ListTodosRequest) (*pb.ListTodosResponse, error) {
+	todos, err := s.store.ListTodos()
+	if err != nil {
+		return nil, err
+	}
+
+	return &pb.ListTodosResponse{
+		Todos: todos,
+	}, nil
+}
+
 func main() {
 	db, err := bolt.Open("demo.db", 0600, nil)
 	if err != nil {
