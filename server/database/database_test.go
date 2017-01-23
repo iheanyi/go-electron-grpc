@@ -40,7 +40,6 @@ func TestCreateTodo(t *testing.T) {
 
 func setupTestDatabase() (*bolt.DB, func(), error) {
 	// Wipe the database before every single test.
-	os.Remove("test.db")
 	db, err := bolt.Open("test.db", 0600, nil)
 	if err != nil {
 		return nil, nil, err
@@ -48,5 +47,6 @@ func setupTestDatabase() (*bolt.DB, func(), error) {
 
 	return db, func() {
 		db.Close()
+		os.Remove("test.db")
 	}, nil
 }
