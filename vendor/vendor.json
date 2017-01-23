@@ -1,0 +1,19 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "nBhBtI5wOm4+vOD4xZbWbE3FlZM=",
+			"path": "github.com/boltdb/bolt",
+			"revision": "a705895fdad108f053eae7ee011ed94a0541ee13",
+			"revisionTime": "2016-12-28T23:26:56Z"
+		},
+		{
+			"checksumSHA1": "uTQtOqR0ePMMcvuvAIksiIZxhqU=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "d75a52659825e75fff6158388dddc6a5b04f9ba5",
+			"revisionTime": "2016-12-14T18:38:57Z"
+		}
+	],
+	"rootPath": "github.com/iheanyi/go-electron-grpc"
+}
