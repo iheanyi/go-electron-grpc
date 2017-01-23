@@ -6,4 +6,5 @@ import (
 
 type Database interface {
 	CreateTodo(todo *pb.Todo) (*pb.Todo, error)
+	ListTodos() ([]*pb.Todo, error)
 }
