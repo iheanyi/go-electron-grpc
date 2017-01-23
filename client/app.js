@@ -12,7 +12,7 @@ $('#name-submit').click(function(evt) {
   let user;
 
   if (name.length > 0) {
-   user = name; 
+    user = name;
   } else {
     user = 'world';
   }
@@ -21,4 +21,21 @@ $('#name-submit').click(function(evt) {
     window.alert("Greeting: " + response.message);
     $nameMessage.text(response.message);
   });
+});
+
+let todo = {
+  todo: {
+    description: "Get Electron Working",
+    done: false
+  }
+};
+
+client.listTodos({}, function(err, response) {
+  if (err) {
+    console.log("There was an error listing todos.");
+    console.log(err);
+  }
+
+  console.log("Response from List Todos:");
+  console.log(response);
 });
